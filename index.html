@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>CareerTop</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+
+
+    <!-- Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+    <!-- Stylesheets -->
+
+    <link href="common-css/bootstrap.css" rel="stylesheet">
+
+    <link href="common-css/ionicons.css" rel="stylesheet">
+
+
+    <link href="category/css/styles.css" rel="stylesheet">
+
+    <link href="category/css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid position-relative no-side-padding">
+
+            <a href="#" class="logo"><img src="images/logo.png" alt="Logo Image"></a>
+
+            <div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
+
+            <ul class="main-menu visible-on-click" id="main-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Features</a></li>
+            </ul><!-- main-menu -->
+
+
+
+        </div><!-- conatiner -->
+    </header>
+    <div class="slider display-table center-text">
+
+    </div>
+
+    <section class="blog-area section">
+        <div class="container">
+            <div class="row" id="row">
+
+
+
+
+            </div><!-- row -->
+            <a class="load-more-btn" href="#"><b>LOAD MORE</b></a>
+        </div><!-- container -->
+    </section><!-- section -->
+
+    <footer>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+
+                        <a class="logo" href="#"><img src="images/logo.png" alt="Logo Image"></a>
+                        <p class="copyright">OAD @2020. All rights reserved.</p>
+                        <p class="copyright">Designed by <a href="#" target="_blank">OnAirDevelopers</a></p>
+                        <ul class="icons">
+                            <li><a href="#"><i class="ion-social-facebook-outline"></i></a></li>
+                            <li><a href="#"><i class="ion-social-twitter-outline"></i></a></li>
+                            <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                            <li><a href="#"><i class="ion-social-vimeo-outline"></i></a></li>
+                            <li><a href="#"><i class="ion-social-pinterest-outline"></i></a></li>
+                        </ul>
+
+                    </div><!-- footer-section -->
+                </div><!-- col-lg-4 col-md-6 -->
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+                        <h4 class="title"><b>CATAGORIES</b></h4>
+                        <ul>
+                            <li><a href="#">BEAUTY</a></li>
+                            <li><a href="#">HEALTH</a></li>
+                            <li><a href="#">MUSIC</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">SPORT</a></li>
+                            <li><a href="#">DESIGN</a></li>
+                            <li><a href="#">TRAVEL</a></li>
+                        </ul>
+                    </div><!-- footer-section -->
+                </div><!-- col-lg-4 col-md-6 -->
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+
+                        <h4 class="title"><b>SUBSCRIBE</b></h4>
+                        <div class="input-area">
+                            <form>
+                                <input class="email-input" type="text" placeholder="Enter your email">
+                                <button class="submit-btn" type="submit"><i
+                                        class="icon ion-ios-email-outline"></i></button>
+                            </form>
+                        </div>
+
+                    </div><!-- footer-section -->
+                </div><!-- col-lg-4 col-md-6 -->
+
+            </div><!-- row -->
+        </div><!-- container -->
+    </footer>
+    <script src="common-js/jquery-3.1.1.min.js"></script>
+
+    <script src="common-js/tether.min.js"></script>
+
+    <script src="common-js/bootstrap.js"></script>
+
+    <script src="common-js/scripts.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDLMMQtK8Lsq4_gTagcU1WCvuFu27SMkIw",
+            authDomain: "careertop.firebaseapp.com",
+            databaseURL: "https://careertop.firebaseio.com",
+            projectId: "careertop",
+            storageBucket: "careertop.appspot.com",
+            messagingSenderId: "959328374379",
+            appId: "1:959328374379:web:1b311968e88e368fc66b2e",
+            measurementId: "G-803897YR2W"
+
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        //const cafeList = document.querySelector('#cafe-list');
+        var c = 0;
+
+        function addHtmlTableRow(doc, c) {
+
+            (function () {
+                "use strict";
+
+
+
+
+                function createDiv(x, y, z) {
+                    var boardDiv = document.createElement("div");
+
+                    boardDiv.className = z;
+                    boardDiv.id = y;
+                    boardDiv.innerText = x;
+
+                    return boardDiv;
+                }
+
+                function createAndModifyDivs(c, x, y, z) {
+                    var board = document.getElementById(c);
+                    board.appendChild(createDiv(x, y, z));
+                }
+
+                function createImg(x, y, z) {
+                    var boardDiv = document.createElement("img");
+
+                    boardDiv.alt = z;
+                    boardDiv.id = y;
+                    boardDiv.src = x;
+
+                    return boardDiv;
+                }
+
+                function createAndModifyImg(c, x, y, z) {
+                    var board = document.getElementById(c);
+                    board.appendChild(createImg(x, y, z));
+                }
+
+                function createa(x, y, z, k) {
+                    var boardDiv = document.createElement("a");
+
+                    boardDiv.className = z;
+                    boardDiv.id = y;
+                    boardDiv.href = x;
+                    boardDiv.innerText = k;
+
+
+                    return boardDiv;
+                }
+
+                function createAndModifya(c, x, y, z, k) {
+                    var board = document.getElementById(c);
+                    board.appendChild(createa(x, y, z, k));
+                }
+
+                function createb(x, y) {
+                    var boardDiv = document.createElement("b");
+                    boardDiv.id = x;
+                    boardDiv.innerText = y;
+
+                    return boardDiv;
+                }
+
+                function createAndModifyb(c, x, y) {
+                    var board = document.getElementById(c);
+                    board.appendChild(createb(x, y));
+                }
+
+                function createh4(x, y) {
+                    var boardDiv = document.createElement("h4");
+
+                    boardDiv.className = y;
+                    boardDiv.id = x;
+                    return boardDiv;
+                }
+
+                function createAndModifyh4(c, x, y) {
+                    var board = document.getElementById(c);
+                    board.appendChild(createh4(x, y));
+                }
+
+                function createul(x, y) {
+                    var boardDiv = document.createElement("ul");
+
+                    boardDiv.className = y;
+                    boardDiv.id = x;
+                    return boardDiv;
+                }
+
+                function createAndModifyul(c, x, y) {
+                    var board = document.getElementById(c);
+                    board.appendChild(createul(x, y));
+                }
+
+                function createli(x) {
+                    var boardDiv = document.createElement("li");
+                    boardDiv.id = x;
+                    return boardDiv;
+                }
+
+                function createAndModifyli(c, x) {
+                    var board = document.getElementById(c);
+                    board.appendChild(createli(x));
+                }
+
+                function createi(x, y) {
+                    var boardDiv = document.createElement("i");
+
+                    boardDiv.className = y;
+                    boardDiv.id = x;
+                    return boardDiv;
+                }
+
+                function createAndModifyi(c, x, y) {
+                    var board = document.getElementById(c);
+                    board.appendChild(createi(x, y));
+                }
+
+                createAndModifyDivs("row", "", doc.data().name + "1", "col-lg-4 col-md-6");
+                createAndModifyDivs(doc.data().name + "1", "", doc.data().name + "2", "card h-100");
+                createAndModifyDivs(doc.data().name + "2", "", doc.data().name + "3", "single-post post-style-1");
+                createAndModifyDivs(doc.data().name + "3", "", doc.data().name + "4", "blog-image");
+                createAndModifyImg(doc.data().name + "4", "images/bg1.png", doc.data().name +
+                    "5", "Blog image");
+                createAndModifya(doc.data().name + "3", "href", doc.data().name + "6", "avatar", "");
+                createAndModifyImg(doc.data().name + "6", "images/logo.png", doc.data().name + "7", "Blog image");
+                createAndModifyDivs(doc.data().name + "3", "", doc.data().name + "8", "blog-info");
+                createAndModifyh4(doc.data().name + "8", doc.data().name + "9", "title");
+                createAndModifya(doc.data().name + "9", "#", doc.data().name + "10", "", "");
+                createAndModifyb(doc.data().name + "10", doc.data().name + "11",doc.data().hname);
+                createAndModifyul(doc.data().name + "8", doc.data().name + "12", "post-footer");
+                createAndModifyli(doc.data().name + "12", doc.data().name + "13");
+                createAndModifya(doc.data().name + "13", "input.html", doc.data().name + "14", "", "")
+                createAndModifyi(doc.data().name + "14", doc.data().name + "15", "ion-eye");
+            }());
+
+        }
+        db.collection('data').get().then(snapshot => {
+            snapshot.docs.forEach(doc => {
+                c++;
+                // alert(doc.data().name);
+                addHtmlTableRow(doc, c);
+
+            });
+        });
+        document.getElementById("del").addEventListener("click", Deldata);
+
+        function Deldata() {
+            if (confirm('Are you sure you want to delete this details from the database?')) {
+                db.collection('attendance').orderBy('rno').get().then(snapshot => {
+                    snapshot.docs.forEach(doc => {
+                        db.collection("attendance").doc(doc.id).delete();
+                        alert("All data deleted");
+                    });
+                });
+            } else {
+                alert("Deletion canceled");
+            }
+        }
+    </script>
+</body>
+
+</html>
