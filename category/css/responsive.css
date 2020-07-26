@@ -119,6 +119,7 @@
 /* Screens Resolution : 479px
 -------------------------------------------------------------------------- */
 @media only screen and (max-width: 479px) {
+	.slider{ height: 350px; width: 100%;}
 
 	/* ---------------------------------
 	1. PRIMARY STYLES
@@ -145,6 +146,8 @@
 /* Screens Resolution : 359px
 -------------------------------------------------------------------------- */
 @media only screen and (max-width: 359px) {
+	.slider{ height: 320px; width: 100%;}
+	
 	
 	
 }
