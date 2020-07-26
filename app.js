@@ -14,13 +14,18 @@ function(data) {
             hname: form.hname.value,
             dname: form.dname.value,
             link: form.link.value,
+            page : form.route.value,
             time:Date().toString().substring(0, 24),
             ip:address,
         });
-        form.name.value = '';
-        form.rno.value = '';
-        //window.location.replace("hunt1.html");
+        form.pname.value = '';
+        form.hname.value = '';
+        form.dname.value = '';
+        form.link.value = '';
+        form.route.value = '';
+        //window.location.replace("route.html");
         alert("Your attendance marked successfully ");
     });
 
 }) 
+
