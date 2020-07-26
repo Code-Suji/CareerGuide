@@ -1,20 +1,4 @@
 
-/*
-====================================================
-
-* 	[Master Stylesheet]
-	
-	Theme Name :  
-	Version    :  
-	Author     :  
-	Author URI :  
-
-====================================================
-
-
-/* ---------------------------------
-1. PRIMARY STYLES
---------------------------------- */
 
 html{ font-size: 100%; height: 100%;  overflow-x: hidden; touch-action: manipulation; }
 
@@ -95,7 +79,7 @@ header{ font-weight: 400; }
 
 header{ overflow: hidden; background: #fff; box-shadow: 0px 2px 10px rgba(0,0,0, .3);  }
 
-header .logo{ float: left; height: 20px; margin: 20px 30px; }
+header .logo{ float:left; height: 55px; margin: 2px 25px ;  }
 
 header .logo img{ height: 100%; width: auto; }
 
@@ -138,7 +122,7 @@ header .src-area .src-btn{ position: absolute; top: 0; bottom: 0; left: 0; width
 4. SLIDER
 --------------------------------- */
 
-.slider{ height: 400px; width: 100%; background-image: url(../../images/bg4.png); background-size: cover; }  
+.slider{ height: 420px; width: 100%; background-image: url(../../images/banner.png); background-size: cover; }  
  
 .slider .title{ color: #fff; text-shadow: 2px 2px 10px rgba(0,0,0,.3); }
  
@@ -193,6 +177,7 @@ header .src-area .src-btn{ position: absolute; top: 0; bottom: 0; left: 0; width
 --------------------------------- */
 
 footer{ padding: 70px 0 30px; background: #fff; }
+footer.logo{ float:left; height: 55px; margin: 2px 25px ;  }
 
 footer .footer-section{ margin-bottom: 40px; }
 
@@ -203,9 +188,9 @@ footer .footer-section ul > li{ margin-right: 10px; margin-top: 10px; }
 footer .copyright{ margin: 10px 0 20px; }
 
 footer .icons > li > a{ height: 40px; width: 40px; border-radius: 40px; line-height: 40px; text-align: center; 
-	transition: all .3s; box-shadow: 0px 0px 2px rgba(0,0,0,1); background: #498BF9; color: #fff; }
+	transition: all .3s; box-shadow: 0px 0px 2px rgba(0,0,0,1); background: #ffbe2e; color: #fff; }
 
-footer .icons > li > a:hover{ transform: translateY(-2px); box-shadow: 5px 10px 20px rgba(0,0,0,.3); }
+footer .icons > li > a:hover{ transform: translateY(-2px); box-shadow: 5px 10px 20px rgba(0,0,0,.3); font-size: 2vmax; }
 
 footer .input-area{ position: relative; height: 50px; width: 100%; box-shadow: 0px 0px 1px #bbb; background: #F5F7F6; }
 
