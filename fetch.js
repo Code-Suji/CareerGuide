@@ -42,7 +42,7 @@ function addHtmlTableRow(doc, c) {
         createAndModify(doc.data().name + "1", "div", doc.data().name + "2", "card h-100", "");
         createAndModify(doc.data().name + "2", "div", doc.data().name + "3", "single-post post-style-1", "", "");
         createAndModify(doc.data().name + "3", "div", doc.data().name + "4", "blog-image", "", "", "");
-        createAndModify(doc.data().name + "4", "img", doc.data().name + "5", "", "", "", "Blog image", "images/event1.png", "", "");
+        createAndModify(doc.data().name + "4", "img", doc.data().name + "5", "", "", "", "Blog image", "images/event1.jpg", "", "");
         createAndModify(doc.data().name + "3", "a", doc.data().name + "6", "avatar", "", "#", "", "", "", "");
         createAndModify(doc.data().name + "6", "img", doc.data().name + "7", "", "", "", "Blog image", "images/pp.jpeg", "", "");
         createAndModify(doc.data().name + "3", "div", doc.data().name + "8", "blog-info", "", "", "");
