@@ -51,7 +51,7 @@ function addHtmlTableRow(doc, c) {
         createAndModify(doc.data().name + "10", "b", doc.data().name + "11", "", doc.data().hname, "", "", "");
         createAndModify(doc.data().name + "8", "ul", doc.data().name + "12", "post-footer", "", "", "");
         createAndModify(doc.data().name + "12", "li", doc.data().name + "13", "", "", "");
-        createAndModify(doc.data().name + "13", "a", doc.data().name + "14", "", "", "event/event1.html", "", "", "", "", "");
+        createAndModify(doc.data().name + "13", "a", doc.data().name + "14", "", "", "event1.html", "", "", "", "", "");
         createAndModify(doc.data().name + "14", "i", doc.data().name + "15", "ion-eye", "", "", "");
     }());
 
