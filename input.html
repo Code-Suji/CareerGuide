@@ -8,19 +8,158 @@
     <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
 
-    <title>ADD DETAILS</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Megrim&display=swap');
+		html,body {
+  height: 100%;
+}
+body {
+    
+    background-image: url("./bg.jpg");
+  
+    background-color: #222;
+  }
+
+h3{
+    margin-top: -5%;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.747);
+    text-align: center;
+}
+h4{
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.747);
+    text-align: center;
+    font-size: 15px;
+}
+form {
+    width: 200px;
+    border: solid 1px #EBEBEB;
+    padding: 3rem;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(153, 145, 145);
+
+}
+input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 2px 20px 10px 10px;
+  }
+
+  input[type=textarea] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 2px 20px 10px 10px;
+  }
+input[type=number] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 2px 20px 10px 10px;
+  }
+
+  input[type=submit]{
+    cursor: pointer;
+    width: 40%;
+    box-sizing: border-box;
+    border: 2px solid rgba(151, 0, 0, 0.212);
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+    background-color: rgba(150, 0, 0, 0.63);
+    font-family: 'Bebas Neue', cursive;
+    align-items: center;
+    margin-bottom: 15px;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 10px 20px 10px 17px;
+    
+}
+
+
+
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */
+    h1{
+        color: rgb(133, 27, 8);
+        font-family: 'Megrim', cursive;
+        text-align: center;
+        font-size: 50px;
+    }
+}
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+    h1{
+        color: rgb(133, 27, 8);
+        font-family: 'Megrim', cursive;
+        text-align: center;
+        font-size: 50px;
+    }}
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+    h1{
+        color: rgb(133, 27, 8);
+        font-family: 'Megrim', cursive;
+        text-align: center;
+        font-size: 100px;
+    }}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
+    h1{
+        color: rgb(133, 27, 8);
+        font-family: 'Megrim', cursive;
+        text-align: center;
+        font-size: 100px;
+    }}
+@media (min-width:1281px) { /* hi-res laptops and desktops */ 
+    h1{
+        color: rgb(133, 27, 8);
+        font-family: 'Megrim', cursive;
+        text-align: center;
+        font-size: 100px;
+    }}
+
+    </style>
+
+    <title>DATA ENTRY</title>
 </head>
 <body>
-    <h1>PUNDA MYR</h1>
-    <h3>Please enter details here
-    </h3>
+    <h1>CAREER TOP</h1>
+    <h3>DATA ENTRY</h3>
+    
     <CENTER>
     <form id="para"> 
         
         <input type="text" name="pname" placeholder="Name" id="pname" required><br>
-        <input type="text" name="hname" placeholder="heading" id="hname" required><br>
-        <input type="textarea" name="dname" placeholder="desc" id="dname" required><br>
-        <input type="text" name="link" placeholder="link" id="link" required><br>
+        <input type="text" name="hname" placeholder="short description" id="hname" required><br>
+        <input type="textarea" name="dname" placeholder="description" id="dname" required><br>
+        <input type="text" name="link" placeholder="apply link" id="link" required><br>
+        <input type="text" name="route" placeholder="filename.html" id="route" required><br>
+        <input type="text" name="img" placeholder="imagename with extension" id="img" required><br>
+        <input type="text" name="ldate" placeholder="last date" id="ldate" required><br>
         <input type="submit" id="regBtn" class="btnreg" value="Submit" >
     
       </form>
@@ -36,7 +175,7 @@
             messagingSenderId: "959328374379",
             appId: "1:959328374379:web:1b311968e88e368fc66b2e",
             measurementId: "G-803897YR2W"
-                 };
+            };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         const db = firebase.firestore();  
