@@ -13,8 +13,10 @@ function(data) {
             name: form.pname.value,
             hname: form.hname.value,
             dname: form.dname.value,
-            link: form.link.value,
+            alink: form.link.value,
             page : form.route.value,
+            img : form.img.value,
+            ldate : form.ldate.value,
             time:Date().toString().substring(0, 24),
             ip:address,
         });
@@ -23,8 +25,9 @@ function(data) {
         form.dname.value = '';
         form.link.value = '';
         form.route.value = '';
-        //window.location.replace("route.html");
-        alert("Your attendance marked successfully ");
+        form.ldate.value = '';
+        form.img.value = '';
+        alert("Data entered successfully ");
     });
 
 }) 
